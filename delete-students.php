@@ -30,10 +30,10 @@
             if (is_numeric($_POST['ID'])){
 
                 $S_ID = $_POST['ID'];
-                $sql1 = "DELETE FROM Class WHERE Student_Id = $S_ID";
+                $sql1 = "DELETE FROM Enroll WHERE `Student-1` = $S_ID OR `Student-2` = $S_ID OR 
+                `Student-3` = $S_ID";
                 $sql2 = "DELETE FROM Family WHERE Student_Id = $S_ID";
                 $sql = "DELETE FROM Students WHERE Student_Id = $S_ID";
-            
                 mysqli_query($link, $sql1);
                 mysqli_query($link, $sql2);
                 $result = mysqli_query($link, $sql);
