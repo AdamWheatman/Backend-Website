@@ -22,9 +22,9 @@
         </p>
 
         <p class="input">
-            Enter The Student ID: <br>
-            <input type="text" class ="input__box" name = "S_ID" 
-            placeholder="Students ID Number">
+            Enter The Enroll ID: <br>
+            <input type="text" class ="input__box" name = "E_ID" 
+            placeholder="Enrollment ID Number">
         </p>
 
 
@@ -65,13 +65,13 @@
 
         if (isset($_POST['submit'])) {
             $T_ID = $_POST['T_ID'];
-            $S_ID = $_POST['S_ID'];
+            $E_ID = $_POST['E_ID'];
             $Year = $_POST['Year'];
             $Grade = $_POST['Grade'];
 
 
-            $sql = "INSERT INTO Class (Teacher_Id, Student_Id, Year, Name_Of_Grade) VALUES 
-            ( '$T_ID', '$S_ID', '$Year', '$Grade')";
+            $sql = "INSERT INTO Class (Teacher_Id, Enroll_Id, Year, Name_Of_Grade) VALUES 
+            ( '$T_ID', '$E_ID', '$Year', '$Grade')";
 
             $result = mysqli_query($link, $sql);
 
