@@ -28,9 +28,9 @@
         </p>
       
         <p class="input">
-            Enter The Student ID: <br>
-            <input type="text" class ="input__box" name = "S_ID" 
-            placeholder="Students ID Number">
+            Enter The Enroll ID: <br>
+            <input type="text" class ="input__box" name = "E_ID" 
+            placeholder="Enrollment ID Number">
         </p>
 
         <p class="input">
@@ -77,12 +77,12 @@
         if (isset($_POST['submit'])) {
             $C_ID = $_POST['C_ID'];
             $T_ID = $_POST['T_ID'];
-            $S_ID = $_POST['S_ID'];
+            $E_ID = $_POST['E_ID'];
             $Year = $_POST['Year'];
             $Grade = $_POST['Grade'];
             
 
-            $sql = "UPDATE Class SET Teacher_Id = '$T_ID', Student_Id = '$S_ID', Year = '$Year ',
+            $sql = "UPDATE Class SET Teacher_Id = '$T_ID', Enroll_Id = '$E_ID', Year = '$Year ',
             Name_Of_Grade = '$Grade' WHERE Class_Id = $C_ID";
             echo $sql;
             $result = mysqli_query($link, $sql);
