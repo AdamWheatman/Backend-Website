@@ -84,7 +84,6 @@
 
             $sql = "UPDATE Class SET Teacher_Id = '$T_ID', Enroll_Id = '$E_ID', Year = '$Year ',
             Name_Of_Grade = '$Grade' WHERE Class_Id = $C_ID";
-            echo $sql;
             $result = mysqli_query($link, $sql);
             
             if (!$result){
